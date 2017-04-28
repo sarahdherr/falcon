@@ -8,7 +8,7 @@ module.exports = db => db.define('weights', {
   },
 
   next_flight: {
-    type: DATE 
+    type: DATE
   },
 
   date: {
