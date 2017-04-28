@@ -1,8 +1,7 @@
 import React from 'react'
 
-export default (props) => {
-  return (
-    <div>
+export default (props) =>
+  (<div>
     <div className='col-lg-2 spacing'></div>
     <div className='log-page col-lg-8'>
       <h2 className='page-title'>Your log</h2>
@@ -98,6 +97,4 @@ export default (props) => {
         </table>
         </div>
     </div>
-  </div>
-  )
-}
+  </div>)
