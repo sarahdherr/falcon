@@ -31,4 +31,3 @@ export default connect(
   state => ({}),
   {login},
 )(Login)
-
