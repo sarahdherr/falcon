@@ -1,0 +1,60 @@
+/*Login page styling:  */
+.login-page {
+	margin-top: 5%;
+}
+
+.login-page * {
+	margin-top: 0.5%;
+	text-align: center;
+}
+
+/*Profile page styling:  */
+.profile-page {
+	margin-top: 3%;
+	padding-left: 3%;
+}
+
+.falcon-img {
+	float: left;
+	display: inline-block;
+}
+
+.img-styling {
+	width: 100%;
+}
+
+.falcon-info {
+	padding-left: 2%;
+	float: left;
+}
+
+.falcon-info * {
+	font-family: 'Trocchi', serif;
+	padding: 2%;
+}
+
+.profile-viz {
+	margin-top: 4%;
+}
+
+.profile-viz * {
+	text-align: center;
+	color: red;
+}
+
+/*Log page styling:  */
+/*.log h3 {
+	text-align: center;
+}*/
+.page-title {
+	text-align: center;
+}
+.spacing {
+	display: inline-block;
+	float: left;
+}
+
+.log-page {
+	display: inline-block;
+	float: left;
+}
