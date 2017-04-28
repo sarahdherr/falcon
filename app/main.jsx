@@ -21,8 +21,7 @@ render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={AppContainer}>
-        <IndexRedirect to="/jokes" />
-        <Route path="/jokes" component={Jokes} />
+        <IndexRedirect to="/login" />
         <Route path="/login" component={Login} />
         <Route path="/profile" component={Profile} />
         <Route path="/log" component={Log} />
