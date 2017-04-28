@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const Login = ({ login }) => (
+export const Login = ({ login }) => {
+  return (
   <div className='login-page'>
     <div>
       <img className='col-lg-4' src='http://lindsaywildlife.org/wp-content/uploads/2016/01/PEFA-03-Paul-Hara-07.31.15.jpg' />
@@ -21,7 +22,7 @@ export const Login = ({ login }) => (
       <button type='submit'>Login</button>
     </form>
   </div>
-)
+)}
 
 import {login} from 'APP/app/reducers/auth'
 import {connect} from 'react-redux'
@@ -30,3 +31,4 @@ export default connect(
   state => ({}),
   {login},
 )(Login)
+
