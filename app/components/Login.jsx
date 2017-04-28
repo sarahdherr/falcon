@@ -22,7 +22,8 @@ export const Login = ({ login }) => {
       <button type='submit'>Login</button>
     </form>
   </div>
-)}
+  )
+}
 
 import {login} from 'APP/app/reducers/auth'
 import {connect} from 'react-redux'

@@ -22,4 +22,5 @@ export default (props) => {
         </ul>
       </div>
     </nav>
-)}
+  )
+}

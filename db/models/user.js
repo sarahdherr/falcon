@@ -11,7 +11,7 @@ module.exports = db => db.define('users', {
   },
 
   name: STRING,
-  
+
   email: {
     type: STRING,
     validate: {

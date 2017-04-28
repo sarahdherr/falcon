@@ -4,16 +4,16 @@ const {DATE, INTEGER, NOW} = require('sequelize')
 
 module.exports = db => db.define('weights', {
   current: {
-  	type: INTEGER
+    type: INTEGER
   },
 
-  next_flight: { 
-  	type: DATE 
+  next_flight: {
+    type: DATE 
   },
 
-  date: { 
-  	type: DATE, 
-  	defaultValue: NOW
+  date: {
+    type: DATE,
+    defaultValue: NOW
   }
 })
 
