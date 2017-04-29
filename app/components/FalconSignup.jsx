@@ -2,8 +2,8 @@ import React from 'react'
 import Dropzone from 'react-dropzone'
 import request from 'superagent'
 
-const CLOUDINARY_UPLOAD_PRESET = 'fq1rxfrr';
-const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dpaa0igrr/upload';
+const CLOUDINARY_UPLOAD_PRESET = 'fq1rxfrr'
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dpaa0igrr/upload'
 
 export class FalconSignup extends React.Component {
   constructor(props) {
@@ -17,27 +17,27 @@ export class FalconSignup extends React.Component {
   onImageDrop(files) {
     this.setState({
       uploadedFile: files[0]
-    });
+    })
 
-    this.handleImageUpload(files[0]);
+    this.handleImageUpload(files[0])
   }
 
   handleImageUpload(file) {
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
                         .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
-                        .field('file', file);
+                        .field('file', file)
 
     upload.end((err, response) => {
       if (err) {
-        console.error(err);
+        console.error(err)
       }
 
       if (response.body.secure_url !== '') {
         this.setState({
           uploadedFileCloudinaryUrl: response.body.secure_url
-        });
+        })
       }
-    });
+    })
   }
 
   render() {
@@ -54,7 +54,7 @@ export class FalconSignup extends React.Component {
           weight_loss: evt.target.loss.value,
           img: this.state.uploadedFileCloudinaryUrl
         }
-        console.log("Bird inforamtion: ", falcon, this.props.user.id)
+        console.log('Bird inforamtion: ', falcon, this.props.user.id)
         this.props.birdSignup(falcon, this.props.user.id)
       } }>
         <p className='signup-dir'>Please provide bird's information, as accurate as possible.</p>
@@ -94,7 +94,8 @@ export class FalconSignup extends React.Component {
         </div>
       </form>
     </div>
-  )}
+    )
+  }
 }
 
 import {birdSignup} from 'APP/app/reducers/bird'

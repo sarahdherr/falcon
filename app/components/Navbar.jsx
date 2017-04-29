@@ -9,7 +9,6 @@ export default (props) => {
       </button>
       <a className="navbar-brand" href="#">Navbar</a>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        
           {
             props.user ? (
               <ul className="navbar-nav">

@@ -39,7 +39,7 @@ export const whoami = () =>
       })
       .catch(failed => dispatch(authenticated(null)))
 
-export const signup = (user) => 
+export const signup = (user) =>
   dispatch =>
     axios.post('api/users', user)
       .then(response => {
@@ -48,7 +48,7 @@ export const signup = (user) =>
       .then(() => browserHistory.push('/falcon-signup'))
       .catch(failed => dispatch(authenticated(null)))
 
-export const fetchUser = (userId) => 
+export const fetchUser = (userId) =>
   dispatch =>
     axios.get(`/api/users/${userId}`)
       .then(response => dispatch(authenticated(response.data)))

@@ -13,7 +13,7 @@ module.exports = require('express').Router()
       .then(bird => res.status(201).json(bird))
       .catch(next))
 
-  .get('/:userId', (req, res, next) => 
+  .get('/:userId', (req, res, next) =>
     Bird.find({
       where: {user_id: req.params.userId}
     })

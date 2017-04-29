@@ -15,7 +15,7 @@ export const stockBird = bird => ({
   type: STOCK_BIRD, bird
 })
 
-export const birdSignup = (falcon, user) => 
+export const birdSignup = (falcon, user) =>
   dispatch =>
     axios.post('api/birds', {bird: falcon, user: user})
       .then(response => {
@@ -24,7 +24,7 @@ export const birdSignup = (falcon, user) =>
       .then(() => browserHistory.push('/profile'))
       .catch(err => console.error(err))
 
-export const fetchBird = (userId) => 
+export const fetchBird = (userId) =>
   dispatch =>
     axios.get(`/api/birds/${userId}`)
       .then(response => dispatch(stockBird(response.data)))

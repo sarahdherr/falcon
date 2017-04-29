@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Signup = ({ signup }) => 
+export const Signup = ({ signup }) =>
   (<div className='signup-page'>
     <h2>Sign Up</h2>
     <form onSubmit={ evt => {

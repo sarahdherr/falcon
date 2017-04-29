@@ -7,8 +7,8 @@ module.exports = db => db.define('hunts', {
   location: STRING,
   description: TEXT,
   timestamp: {
-  	type: DATE,
-  	defaultValue: NOW
+    type: DATE,
+    defaultValue: NOW
   }
 })
 
