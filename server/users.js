@@ -24,7 +24,7 @@ module.exports = require('express').Router()
       .then(user => res.status(201).json(user))
       .catch(next))
   .get('/:id',
-    mustBeLoggedIn,
+    // mustBeLoggedIn,
     (req, res, next) =>
       User.findById(req.params.id)
       .then(user => res.json(user))

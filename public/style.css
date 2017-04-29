@@ -8,6 +8,44 @@
 	text-align: center;
 }
 
+/*Signup page styling:  */
+.signup-page {
+	margin-top: 5%;
+}
+
+.signup-page * {
+	margin-top: 0.5%;
+	text-align: center;
+}
+
+.signup-entry {
+	text-align: center;
+	margin-top: 0.5%;
+}
+
+.signup-dir {
+	text-align: center;
+	margin-top: 2%;
+	font-size: 1.2em;
+}
+
+.normal-input {
+	text-align: left;
+}
+
+.move-to-middle {
+	/*margin-left: 50%;*/
+}
+
+.falcon-signup {
+	float: left;
+}
+
+.falcon-upload {
+	margin-left: 25%;
+	float: left;
+}
+
 /*Profile page styling:  */
 .profile-page {
 	margin-top: 3%;
