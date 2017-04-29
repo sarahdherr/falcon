@@ -20,8 +20,9 @@ export const birdSignup = (falcon, user) =>
     axios.post('api/birds', {bird: falcon, user: user})
       .then(response => {
         dispatch(stockBird(response.data))
+        return response.data
       })
-      .then(() => browserHistory.push('/profile'))
+      .then(bird => browserHistory.push(`/profile/${bird.user_id}`))
       .catch(err => console.error(err))
 
 export const fetchBird = (userId) =>
