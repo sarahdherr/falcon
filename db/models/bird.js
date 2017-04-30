@@ -13,6 +13,4 @@ module.exports = db => db.define('birds', {
 
 module.exports.associations = (Bird, { User, Weight, Feeding }) => {
   Bird.belongsTo(User)
-  Bird.hasMany(Weight)
-  Bird.hasMany(Feeding)
 }

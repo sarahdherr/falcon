@@ -11,6 +11,6 @@ module.exports = db => db.define('weights', {
   }
 })
 
-module.exports.associations = (Weight, { Bird }) => {
-  Weight.belongsTo(Bird)
+module.exports.associations = (Weight, { User }) => {
+  Weight.belongsTo(User)
 }

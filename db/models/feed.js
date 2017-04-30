@@ -11,6 +11,6 @@ module.exports = db => db.define('foods', {
   }
 })
 
-module.exports.associations = (Feeding, { Bird }) => {
-  Feeding.belongsTo(Bird)
+module.exports.associations = (Feeding, { User }) => {
+  Feeding.belongsTo(User)
 }
