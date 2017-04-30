@@ -19,7 +19,7 @@ export default (props) => {
                   <Link className='nav-link' to={`/profile/${props.user.id}`}>Profile</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className='nav-link' to='/log'>Log</Link>
+                  <Link className='nav-link' to={`/log/${props.user.id}`}>Log</Link>
                 </li>
               </ul>
             ) : (

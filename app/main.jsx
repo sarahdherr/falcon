@@ -28,6 +28,11 @@ const onProfileEnter = (nextRouterState, _, done) => {
   .then(done)
 }
 
+const onLogEnter = (nextRouterState, _, done) => {
+  store.dispatch(fetchBird(nextRouterState.params.userId))
+  .then(done)
+}
+
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
@@ -35,7 +40,7 @@ render(
         <IndexRedirect to="/login" />
         <Route path="/login" component={Login} />
         <Route path="/profile/:userId" component={ProfileContainer} onEnter={onProfileEnter} />
-        <Route path="/log" component={Log} />
+        <Route path="/log/:userId" component={Log} onEnter={onLogEnter} />
         <Route path="/signup" component={Signup} />
         <Route path="/falcon-signup" component={FalconSignup} />
         <Route path='/logout' component={Logout} />
