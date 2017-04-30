@@ -37,7 +37,7 @@ export default class extends React.Component {
     })
   }
 
-  render() {  
+  render() {
     return (
       <div>
       <div className='col-lg-2 spacing'></div>
