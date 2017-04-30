@@ -12,8 +12,8 @@ const reducer = (state=initialState, action) => {
 
   switch (action.type) {
   case STOCK_WEIGHT:
-     newState.weights = action.weights
-     break
+    newState.weights = action.weights
+    break
   case STOCK_FEEDING:
     newState.feedings = action.feedings
     break
@@ -41,9 +41,8 @@ export const stockHunting = huntings => ({
   type: STOCK_HUNTINGS, huntings
 })
 
-
 export const fetchWeight = userId =>
-  dispatch => 
+  dispatch =>
     axios.get(`/api/logs/weight/${userId}`)
       .then(response => dispatch(stockWeight(response.data)))
       .catch(err => console.error(err))
@@ -59,7 +58,6 @@ export const fetchHunting = userId =>
     axios.get(`/api/logs/hunting/${userId}`)
       .then(response => dispatch(stockHunting(response.data)))
       .catch(err => console.error(err))
-
 
 export const addWeight = (entry, birdId, userId) =>
   dispatch => {

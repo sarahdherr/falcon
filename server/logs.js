@@ -27,7 +27,7 @@ module.exports = require('express').Router()
     .catch(next)
   })
 
-  .get(`/weight/:userId`, (req, res, next) => 
+  .get(`/weight/:userId`, (req, res, next) =>
     Weight.findAll({
       where: {
         user_id: req.params.userId
