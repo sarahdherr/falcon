@@ -6,7 +6,7 @@ export const Logout = ({ logout }) => {
   <div className='login-page'>
     <h1>Logout of your account.</h1>
     <div>
-      <button onClick={logout}>Logout</button>
+      <button className='btn btn-default' onClick={logout}>Logout</button>
     </div>
   </div>
   )
