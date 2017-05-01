@@ -6,7 +6,7 @@ const Hunt = (props) => {
   console.log(props.hunt)
   return (
     <div>
-      <h2 className='hunt-text'>Your trip to {props.hunt.location} on {strftime('%a, %D' , new Date(props.hunt.timestamp))}.</h2>
+      <h2 className='hunt-text'>Your trip to {props.hunt.location} on {strftime('%a, %D', new Date(props.hunt.timestamp))}.</h2>
       <div className='trip-pics'>
         <img className='col-lg-4' src='http://yogaforduckhunters.com/wp-content/uploads/2016/10/hugo_crop.jpg' />
         <img className='col-lg-4' src='https://s-media-cache-ak0.pinimg.com/736x/7f/7d/cf/7f7dcfa01ca12a3e961fe5365c5d7244.jpg' />
