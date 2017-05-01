@@ -51,7 +51,6 @@ export default class extends React.Component {
             dependentAxis
             tickFormat={(x) => (`${x} gms`)}
           />
-          <VictoryLabel text={'Mapping your bird\'s homeostatsis'}/>
           <VictoryLine
             data={dummyData}
             x='timestamp'
@@ -59,7 +58,7 @@ export default class extends React.Component {
             interpolation="natural"
             scale='time'
             style={{
-              data: {stroke: '#155765'}
+              data: {stroke: '#1D263B'}
             }}
           />
           <VictoryScatter
@@ -68,7 +67,7 @@ export default class extends React.Component {
             y='current'
             scale='time'
             style={{
-              data: {fill: (d) => d.y < 880 ? '#4d2C3D' : '#57652A'}
+              data: {fill: (d) => d.y < 880 ? '#4CB963' : '#157F1F'}
             }}
           />
         </VictoryChart>

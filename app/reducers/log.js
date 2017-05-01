@@ -60,24 +60,21 @@ export const fetchHunting = userId =>
       .catch(err => console.error(err))
 
 export const addWeight = (entry, birdId, userId) =>
-  dispatch => {
+  dispatch =>
     axios.post(`/api/logs/weight`, {entry: entry, userId: userId})
-      .then(() => browserHistory.push(`/log/${userId}`))
+      .then(() => dispatch(fetchWeight(userId)))
       .catch(err => console.error(err))
-  }
 
 export const addFeeding = (entry, birdId, userId) =>
-  dispatch => {
+  dispatch =>
     axios.post(`/api/logs/feeding`, {entry: entry, userId: userId})
-      .then(() => browserHistory.push(`/log/${userId}`))
+      .then(() => dispatch(fetchFeeding(userId)))
       .catch(err => console.error(err))
-  }
 
 export const addHunting = (entry, birdId, userId) =>
-  dispatch => {
+  dispatch =>
     axios.post(`/api/logs/hunting`, {entry: entry, userId: userId})
-      .then(() => browserHistory.push(`/log/${userId}`))
+      .then(() => dispatch(fetchHunting(userId)))
       .catch(err => console.error(err))
-  }
 
 export default reducer

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { addWeight, addFeeding, addHunting, fetchWeight } from '../reducers/log'
+import { addWeight, addFeeding, addHunting, fetchWeight, fetchFeeding, fetchHunting } from '../reducers/log'
 import Log from '../components/Log'
 
 const mapStateToProps = state => {
@@ -12,6 +12,6 @@ const mapStateToProps = state => {
   })
 }
 
-const mapDispatchToProps = { addHunting, addWeight, addFeeding, fetchWeight }
+const mapDispatchToProps = { addHunting, addWeight, addFeeding, fetchWeight, fetchFeeding, fetchHunting }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Log)

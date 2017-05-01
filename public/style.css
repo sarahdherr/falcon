@@ -5,8 +5,21 @@ Olive (Green) = #57652A
 Ornate (Tan) = #AB9353
 Plum (Purple) = #4d2C3D
 */
+
+/*
+NEW COLOR SCHEME:
+GREEN: #157F1F;
+L. GREEN: #4CB963;
+L. BLUE: #A0EADE;
+BLUE: #5C6784;
+D. BLUE: #1D263B;
+*/
 .log-table td, th {
 	border: 1.7px solid #292b2c !important;
+}
+
+body * {
+	font-family: Georgia, Serif;
 }
 
 .nav-myFalcon {
@@ -14,7 +27,7 @@ Plum (Purple) = #4d2C3D
 }
 
 .falcon-img {
-	background-color: #4d2C3D;
+	background-color: #1D263B;
 	border-radius: 90px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -32,11 +45,11 @@ Plum (Purple) = #4d2C3D
 }*/
 
 body {
-	background-color: #AB9353;
+	background-color: #A0EADE;
 }
 
 .nav-view {
-	background-color: #155765;
+	background-color: #5C6784;
 }
 
 .nav-view a {
@@ -116,7 +129,7 @@ svg {
 }
 
 .falcon-info * {
-	font-family: 'Trocchi', serif;
+	/*font-family: 'Trocchi', serif;*/
 	padding: 2%;
 	font-size: 1.3em;
 }
@@ -135,11 +148,11 @@ svg {
 }
 
 .weather {
-	font-family: 'Trocchi', serif;
+	/*font-family: 'Trocchi', serif;*/
 	padding: 0%;
 	padding-top: 2%;
 	margin-top: 8%;
-	background-color: #57652A;
+	background-color: #157F1F;
 	width: 30%;
 	height: 90vh;
 	margin-left: -3%;
@@ -210,7 +223,7 @@ svg {
 
 .log {
 /*	margin: 1em;*/
-	background-color: #57652A;
+	background-color: #157F1F;
 	border-radius: 10px;
 	margin-top: 2%;
 	padding: 1%;
@@ -220,7 +233,7 @@ svg {
 }
 
 .log button {
-	background-color: #155765;
+	background-color: #4CB963;
 }
 
 .new-line {

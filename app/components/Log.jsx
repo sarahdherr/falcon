@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router'
+import strftime from 'strftime'
 
 export default class extends React.Component {
   constructor(props) {
@@ -59,7 +60,6 @@ export default class extends React.Component {
     this.setState({
       showAddWeight: false
     })
-    this.props.fetchWeight(this.props.user.id)
   }
 
   handleFeedingChange(evt) {
@@ -93,9 +93,7 @@ export default class extends React.Component {
   handleHuntingSubmit(evt) {
     evt.preventDefault()
     this.props.addHunting(this.state.hunting, this.props.bird.id, this.props.user.id)
-    this.setState({
-      showAddHunting: false
-    })
+    this.setState({ showAddHunting: false })
   }
 
   render() {
@@ -147,8 +145,8 @@ export default class extends React.Component {
               {
                 this.props.weights.map(weight =>
                   <tr key={weight.id}>
-                    <td>{weight.timestamp}</td>
-                    <td>{weight.next_flight}</td>
+                    <td>{strftime('%a, %D %R %P', new Date(weight.timestamp))}</td>
+                    <td>{strftime('%a, %D %R %P', new Date(weight.next_flight))}</td>
                     <td>{weight.current} gm</td>
                     <td>{this.props.bird.flight_weight} gm</td>
                   </tr>
@@ -202,7 +200,7 @@ export default class extends React.Component {
             {
               this.props.feedings.map(feeding =>
                 <tr key={feeding.id}>
-                  <td>{feeding.timestamp}</td>
+                  <td>{strftime('%a, %D %R %P', new Date(feeding.timestamp))}</td>
                   <td>{feeding.type}</td>
                   <td>{feeding.weight} gm</td>
                 </tr>
@@ -262,7 +260,7 @@ export default class extends React.Component {
                 {
                   this.props.hunts.map(hunt =>
                     <tr key={hunt.id}>
-                      <td><Link to={`/hunt/${hunt.id}`}>{hunt.timestamp}</Link></td>
+                      <td><Link to={`/hunt/${hunt.id}`}>{strftime('%a, %D %R %P', new Date(hunt.timestamp))}</Link></td>
                       <td>{hunt.rating}</td>
                       <td>{hunt.location}</td>
                       <td>{hunt.description}</td>
