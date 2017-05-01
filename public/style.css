@@ -1,3 +1,45 @@
+/*
+COLOR SCHEME:
+Bluebell (Teal) = #155765
+Olive (Green) = #57652A
+Ornate (Tan) = #AB9353
+Plum (Purple) = #4d2C3D
+*/
+
+.nav-myFalcon {
+	text-decoration-color: #4d2C3D;
+}
+
+.falcon-img {
+	background-color: #4d2C3D;
+	border-radius: 90px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.falcon-img * {
+	padding-right: 2%;
+	padding-left: 2%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-radius: 100px;
+}
+/*
+.falcon-info {
+	background-color: #57652A;
+}*/
+
+body {
+	background-color: #AB9353;
+}
+
+.nav-view {
+	background-color: #155765;
+}
+
+.nav-view a {
+	color: #3CC47C;
+}
+
 svg {
 	height: 72vh;
 }
@@ -66,25 +108,68 @@ svg {
 }
 
 .falcon-info {
-	padding-left: 2%;
+	padding-left: 5%;
 	float: left;
 }
 
 .falcon-info * {
 	font-family: 'Trocchi', serif;
 	padding: 2%;
+	font-size: 1.3em;
 }
 
 .profile-viz * {
 	padding-left: 3%;
 	padding-top: 2%;
 	/*margin-top: 4%;*/
+	display: inline-block;
+	vertical-align: top;
 }
 
 .profile-viz * {
 	text-align: center;
-	color: red;
+	color: black;
 }
+
+.weather {
+	font-family: 'Trocchi', serif;
+	padding: 0%;
+	padding-top: 2%;
+	margin-top: 8%;
+	background-color: #57652A;
+	width: 30%;
+	height: 90vh;
+	margin-left: -3%;
+	border-radius: 40px;
+}
+
+.day {
+	display: block;
+	margin-top: 5%;
+}
+
+.day * {
+	color: black;
+}
+
+.day-info {
+	width: 50%;
+	float: left;
+	display: inline-block;
+}
+
+.day-info {
+	padding-top: 5%;
+}
+
+.day-info p {
+	margin-bottom: 2%;
+}
+
+.day-img {
+	margin-left: -8%;
+}
+
 
 /*Log page styling:  */
 /*.log h3 {
@@ -122,7 +207,7 @@ svg {
 
 .log {
 /*	margin: 1em;*/
-	background-color: #4caf50;
+	background-color: #57652A;
 	border-radius: 10px;
 	margin-top: 2%;
 	padding: 1%;
@@ -131,6 +216,20 @@ svg {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.log button {
+	background-color: #155765;
+}
+
 .new-line {
 	padding-bottom: 1%;
+}
+
+.log a {
+	color: #292b2c;
+}
+
+.desc-input {
+	min-height: 200px;
+	min-width: 400px;
+	vertical-align: top;
 }

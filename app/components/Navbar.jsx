@@ -3,11 +3,11 @@ import { Link } from 'react-router'
 
 export default (props) => {
   return (
-    <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
+    <nav className="navbar navbar-toggleable-md navbar-light bg-faded nav-view">
       <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
-      <a className="navbar-brand" href="#">myFalcon</a>
+      <a className="navbar-brand nav-myFalcon" href="#">myFalcon</a>
       <div className="collapse navbar-collapse" id="navbarNavDropdown">
           {
             props.user ? (

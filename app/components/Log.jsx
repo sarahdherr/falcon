@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 export default class extends React.Component {
   constructor(props) {
@@ -101,7 +102,6 @@ export default class extends React.Component {
       <div>
       <div className='col-lg-2 spacing'></div>
       <div className='log-page col-lg-8'>
-        <h2 className='page-title'>Your log</h2>
         <div className='weight log'>
           <div className='new-line'>
             <h3 className='log-title'>Weight</h3>
@@ -240,7 +240,7 @@ export default class extends React.Component {
                   </div>
                   <div>
                     <label>Description:</label>
-                    <input className='normal-input' name='description' onChange={this.handleHuntingChange} />
+                    <input className='normal-input desc-input' name='description' onChange={this.handleHuntingChange} />
                   </div>
                   <div>
                     <button className='btn'>Add Hunting Entry</button>
@@ -261,7 +261,7 @@ export default class extends React.Component {
                 {
                   this.props.hunts.map(hunt =>
                     <tr key={hunt.id}>
-                      <td>{hunt.timestamp}</td>
+                      <td><Link to={`/hunt/${hunt.id}`}>{hunt.timestamp}</Link></td>
                       <td>{hunt.rating}</td>
                       <td>{hunt.location}</td>
                       <td>{hunt.description}</td>
