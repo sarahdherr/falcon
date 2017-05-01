@@ -59,7 +59,7 @@ export default class extends React.Component {
     this.setState({
       showAddWeight: false
     })
-    this.props.fetchWeight(this.props.user.id) 
+    this.props.fetchWeight(this.props.user.id)
   }
 
   handleFeedingChange(evt) {
