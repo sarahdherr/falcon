@@ -5,6 +5,9 @@ Olive (Green) = #57652A
 Ornate (Tan) = #AB9353
 Plum (Purple) = #4d2C3D
 */
+.log-table td, th {
+	border: 1.7px solid #292b2c !important;
+}
 
 .nav-myFalcon {
 	text-decoration-color: #4d2C3D;

@@ -59,6 +59,7 @@ export default class extends React.Component {
     this.setState({
       showAddWeight: false
     })
+    this.props.fetchWeight(this.props.user.id) 
   }
 
   handleFeedingChange(evt) {
@@ -133,7 +134,7 @@ export default class extends React.Component {
                 </form>
               </div>
               ) : (
-            <table className='table table-bordered'>
+            <table className='table table-bordered log-table'>
               <thead>
                 <tr>
                   <th>Weighing date</th>
@@ -189,7 +190,7 @@ export default class extends React.Component {
                 </form>
               </div>
               ) : (
-          <table className='table table-bordered'>
+          <table className='table table-bordered log-table'>
           <thead>
             <tr>
               <th>Feeding date</th>
@@ -248,7 +249,7 @@ export default class extends React.Component {
                 </form>
               </div>
               ) : (
-              <table className='table table-bordered'>
+              <table className='table table-bordered log-table'>
                 <thead>
                 <tr>
                   <th>Hunting date</th>
