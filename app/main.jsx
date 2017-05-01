@@ -10,7 +10,7 @@ import AppContainer from './containers/AppContainer'
 
 import { fetchBird } from './reducers/bird'
 import { fetchUser } from './reducers/auth'
-import { fetchWeight, fetchFeeding, fetchHunting } from './reducers/log'
+import { fetchWeight, fetchFeeding, fetchHunting, fetchHunt } from './reducers/log'
 
 import Jokes from './components/Jokes'
 import Login from './components/Login'
@@ -22,6 +22,7 @@ import LogContainer from './containers/LogContainer'
 import Signup from './components/Signup'
 import FalconSignup from './components/FalconSignup'
 import Logout from './components/Logout'
+import Hunt from './components/Hunt'
 
 const onProfileEnter = (nextRouterState, _, done) => {
   store.dispatch(fetchBird(nextRouterState.params.userId))
@@ -37,6 +38,11 @@ const onLogEnter = (nextRouterState, _, done) => {
   .then(done)
 }
 
+const onHuntEnter = (nextRouterState, _, done) => {
+  store.dispatch(fetchHunt(nextRouterState.params.huntId))
+  .then(done)
+}
+
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
@@ -48,6 +54,7 @@ render(
         <Route path="/signup" component={Signup} />
         <Route path="/falcon-signup" component={FalconSignup} />
         <Route path='/logout' component={Logout} />
+        <Route path='/hunt/:huntId' component={Hunt} onEnter={onHuntEnter} />
       </Route>
       <Route path='*' component={NotFound} />
     </Router>

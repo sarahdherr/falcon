@@ -53,3 +53,8 @@ module.exports = require('express').Router()
     })
     .then(hunts => res.json(hunts))
     .catch(next))
+
+  .get(`/hunt/:huntId`, (req, res, next) =>
+    Hunting.findById(req.params.huntId)
+      .then(hunt => res.json(hunt))
+      .catch(next))

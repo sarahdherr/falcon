@@ -263,7 +263,7 @@ export default class extends React.Component {
                       <td><Link to={`/hunt/${hunt.id}`}>{strftime('%a, %D %R %P', new Date(hunt.timestamp))}</Link></td>
                       <td>{hunt.rating}</td>
                       <td>{hunt.location}</td>
-                      <td>{hunt.description}</td>
+                      <td>{hunt.description.slice(0, 35)}...</td>
                     </tr>
                   )
                 }

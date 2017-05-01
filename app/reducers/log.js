@@ -4,7 +4,8 @@ import { browserHistory } from 'react-router'
 const initialState = {
   weights: [],
   feedings: [],
-  hunts: []
+  hunts: [],
+  hunt: {}
 }
 
 const reducer = (state=initialState, action) => {
@@ -20,6 +21,9 @@ const reducer = (state=initialState, action) => {
   case STOCK_HUNTINGS:
     newState.hunts = action.huntings
     break
+  case STOCK_HUNT:
+    newState.hunt = action.hunt
+    break
   }
 
   return newState
@@ -28,6 +32,7 @@ const reducer = (state=initialState, action) => {
 const STOCK_WEIGHT = 'STOCK_WEIGHT'
 const STOCK_FEEDING = 'STOCK_FEEDING'
 const STOCK_HUNTINGS = 'STOCK_HUNTINGS'
+const STOCK_HUNT = 'STOCK_HUNT'
 
 export const stockWeight = weights => ({
   type: STOCK_WEIGHT, weights
@@ -40,6 +45,16 @@ export const stockFeeding = feedings => ({
 export const stockHunting = huntings => ({
   type: STOCK_HUNTINGS, huntings
 })
+
+export const stockHunt = hunt => ({
+  type: STOCK_HUNT, hunt
+})
+
+export const fetchHunt = huntId =>
+  dispatch =>
+    axios.get(`/api/logs/hunt/${huntId}`)
+      .then(response => dispatch(stockHunt(response.data)))
+      .catch(err => console.error(err))
 
 export const fetchWeight = userId =>
   dispatch =>

@@ -14,6 +14,32 @@ L. BLUE: #A0EADE;
 BLUE: #5C6784;
 D. BLUE: #1D263B;
 */
+.hunt-text {
+	padding: 20px;
+	text-align: center;
+}
+
+.fly-route {
+	display: inline-block;
+	float: left;
+}
+
+.fly-stats {
+	padding-left: 100px;
+	display: inline-block;
+	float: left;
+}
+
+.fly-input {
+	display: inline-block;
+	float: left;
+	padding: 20px;
+}
+
+.fly-route img {
+	width: 100%;
+}
+
 .log-table td, th {
 	border: 1.7px solid #292b2c !important;
 }
@@ -157,6 +183,8 @@ svg {
 	height: 90vh;
 	margin-left: -3%;
 	border-radius: 40px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
 }
 
 .day {
