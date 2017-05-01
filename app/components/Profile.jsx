@@ -1,7 +1,7 @@
 import React from 'react'
+import LineChart from './LineChart'
 
 export default ({bird = {}, user = {}}) => {
-  console.log('PROFILE PROPS', bird, user)
   return (
     <div className='profile-page'>
       <div className='falcon-summary'>
@@ -20,8 +20,7 @@ export default ({bird = {}, user = {}}) => {
       </div>
       <div className='clearfix' />
       <div className='profile-viz col-lg-12'>
-        <h2>Real D3 chart to come...</h2>
-        <img className='img-styling' src='https://www.dyclassroom.com/image/topic/chartjs/linegraph.png' />
+        <LineChart />
       </div>
     </div>
   )

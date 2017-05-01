@@ -1,3 +1,7 @@
+svg {
+	height: 72vh;
+}
+
 /*Login page styling:  */
 .login-page {
 	margin-top: 5%;
@@ -71,8 +75,10 @@
 	padding: 2%;
 }
 
-.profile-viz {
-	margin-top: 4%;
+.profile-viz * {
+	padding-left: 3%;
+	padding-top: 2%;
+	/*margin-top: 4%;*/
 }
 
 .profile-viz * {
