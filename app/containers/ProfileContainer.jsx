@@ -4,7 +4,8 @@ import Profile from '../components/Profile'
 const mapStateToProps = state => {
   return ({
     bird: state.bird,
-    user: state.auth
+    user: state.auth,
+    weights: state.log.weights
   })
 }
 
