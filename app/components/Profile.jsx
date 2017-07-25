@@ -1,7 +1,7 @@
 import React from 'react'
 import LineChart from './LineChart'
 
-export default ({bird = {}, user = {}}) => {
+export default ({bird = {}, user = {}, weights=[]}) => {
   return (
     <div className='profile-page'>
       <div className='falcon-summary'>
@@ -20,7 +20,9 @@ export default ({bird = {}, user = {}}) => {
       </div>
       <div className='clearfix' />
       <div className='profile-viz col-lg-12'>
-        <LineChart />
+        {
+          weights.length ? <LineChart /> : <div />
+        }
         <div className='weather'>
           <h3>Weather forcast (New York, NY)</h3>
           <div className='day'>
@@ -51,16 +53,6 @@ export default ({bird = {}, user = {}}) => {
             </div>
             <div className='day-img'>
               <img src='http://www.weather.gov/images/nws/newicons/shra.png' />
-            </div>
-          </div>
-          <div className='day'>
-            <div className='day-info'>
-              <h4>Thursday, May 4</h4>
-              <p>High: 36 degrees C</p>
-              <p>Low: 30 degrees C</p>
-            </div>
-            <div className='day-img'>
-              <img src='http://www.weather.gov/images/nws/newicons/bkn.png' />
             </div>
           </div>
         </div>
